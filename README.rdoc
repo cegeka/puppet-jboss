@@ -1,0 +1,5 @@
+= puppet-jboss module
+
+{<img src='https://codex.cegeka.be/jenkins/job/puppet-jboss/badge/icon' />}[https://codex.cegeka.be/jenkins/job/puppet-jboss/]
+
+This is the jboss module.
