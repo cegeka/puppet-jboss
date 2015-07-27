@@ -71,9 +71,9 @@ class jboss::config(
   }
 
   file { $jboss_log_dir :
-    ensure  => directory,
-    owner   => $jboss_user,
-    group   => $jboss_group
+    ensure => directory,
+    owner  => $jboss_user,
+    group  => $jboss_group
   }
 
   file { "${jboss_base_dir_real}/configuration/mgmt-users.properties":
