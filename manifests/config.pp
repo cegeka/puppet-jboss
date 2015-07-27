@@ -91,7 +91,7 @@ class jboss::config(
     owner   => $jboss_user,
     group   => $jboss_group,
     replace => false,
-    source  => "puppet:///modules/jboss/mgmt-groups.properties",
+    source  => 'puppet:///modules/jboss/mgmt-groups.properties',
     require => File[$jboss_config_dir_real]
   }
 
@@ -111,7 +111,7 @@ class jboss::config(
     owner   => $jboss_user,
     group   => $jboss_group,
     replace => false,
-    source  => "puppet:///modules/jboss/logging.properties",
+    source  => 'puppet:///modules/jboss/logging.properties',
     require => File[$jboss_config_dir_real]
   }
 
@@ -121,7 +121,7 @@ class jboss::config(
     owner   => $jboss_user,
     group   => $jboss_group,
     replace => false,
-    source  => "puppet:///modules/jboss/application-users.properties",
+    source  => 'puppet:///modules/jboss/application-users.properties',
     require => File[$jboss_config_dir_real]
   }
 
@@ -131,7 +131,7 @@ class jboss::config(
     owner   => $jboss_user,
     group   => $jboss_group,
     replace => false,
-    source  => "puppet:///modules/jboss/application-roles.properties",
+    source  => 'puppet:///modules/jboss/application-roles.properties',
     require => File[$jboss_config_dir_real]
   }
 
