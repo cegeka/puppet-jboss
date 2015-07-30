@@ -28,6 +28,7 @@ class jboss(
   $jboss_user = 'jboss',
   $jboss_group = 'jboss',
   $jboss_data_dir = '/opt/jboss',
+  $jboss_shutdown_wait = '60',
   $jboss_log_dir = undef,
   $users_mgmt = []
 ){
@@ -57,6 +58,7 @@ class jboss(
     jboss_user              => $jboss_user,
     jboss_group             => $jboss_group,
     jboss_data_dir          => $jboss_data_dir,
+    jboss_shutdown_wait     => $jboss_shutdown_wait,
     jboss_log_dir           => $jboss_log_dir,
     users_mgmt              => $users_mgmt
   }

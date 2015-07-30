@@ -13,6 +13,7 @@ class jboss::config(
   $jboss_user = 'jboss',
   $jboss_group = 'jboss',
   $jboss_data_dir = '/opt/jboss',
+  $jboss_shutdown_wait = '60',
   $jboss_log_dir = undef,
   $users_mgmt = []
 ){
