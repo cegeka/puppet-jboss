@@ -15,6 +15,7 @@ class jboss::config(
   $jboss_data_dir = '/opt/jboss',
   $jboss_shutdown_wait = '60',
   $jboss_log_dir = undef,
+  $jboss_env_props = undef,
   $users_mgmt = []
 ){
 
