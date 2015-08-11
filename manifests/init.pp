@@ -30,6 +30,7 @@ class jboss(
   $jboss_data_dir = '/opt/jboss',
   $jboss_shutdown_wait = '60',
   $jboss_log_dir = undef,
+  $jboss_env_props = undef,
   $users_mgmt = []
 ){
 
@@ -60,6 +61,7 @@ class jboss(
     jboss_data_dir          => $jboss_data_dir,
     jboss_shutdown_wait     => $jboss_shutdown_wait,
     jboss_log_dir           => $jboss_log_dir,
+    jboss_env_props         => $jboss_env_props,
     users_mgmt              => $users_mgmt
   }
 

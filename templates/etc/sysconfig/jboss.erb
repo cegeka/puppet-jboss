@@ -41,3 +41,12 @@ JAVA_OPTS="$JAVA_OPTS -Djboss.bind.address=<%= @jboss_bind_address %> -Djboss.bi
 <%- if @jboss_debug -%>
 JAVA_OPTS="$JAVA_OPTS -agentlib:jdwp=transport=dt_socket,address=8787,server=y,suspend=n"
 <%- end -%>
+
+## Additional JBOSS environment properties
+<%- if has_variable?("jboss_env_props") -%>
+<% scope.lookupvar('jboss_env_props').each do |env_props| %>
+<% env_props.keys.sort.each do |key| -%>
+<%=key %>=<%=env_props[key]%>
+<% end -%>
+<% end %>
+<% end %>
