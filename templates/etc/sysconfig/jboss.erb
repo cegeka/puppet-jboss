@@ -43,7 +43,7 @@ JAVA_OPTS="$JAVA_OPTS -agentlib:jdwp=transport=dt_socket,address=8787,server=y,s
 <%- end -%>
 
 ## Additional JBOSS environment properties
-<%- if has_variable?("jboss_env_props") -%>
+<%- if @jboss_env_props -%>
 <% scope.lookupvar('jboss_env_props').each do |env_props| %>
 <% env_props.keys.sort.each do |key| -%>
 <%=key %>=<%=env_props[key]%>
