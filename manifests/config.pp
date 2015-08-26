@@ -1,6 +1,7 @@
 class jboss::config(
   $version = undef,
   $java_home = '/usr/java/latest',
+  $java_opts = [],
   $jboss_mode = 'standalone',
   $jboss_config = 'standalone',
   $jboss_bind_address = '0.0.0.0',

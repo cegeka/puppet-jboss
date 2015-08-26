@@ -16,6 +16,7 @@ class jboss(
   $service_state = 'running',
   $service_enable = true,
   $java_home = '/usr/java/latest',
+  $java_opts = [],
   $jboss_mode = 'standalone',
   $jboss_config = 'standalone',
   $jboss_bind_address = '0.0.0.0',
@@ -47,6 +48,7 @@ class jboss(
   class { 'jboss::config':
     version                 => $version,
     java_home               => $java_home,
+    java_opts               => $java_opts,
     jboss_mode              => $jboss_mode,
     jboss_config            => $jboss_config,
     jboss_bind_address      => $jboss_bind_address,
