@@ -9,8 +9,6 @@ class jboss::package(
   $jboss_full_version = regsubst($version, '^(\d+\.\d+\.\d+).*','\1')
   $jboss_major_version = regsubst($version, '^(\d+\.\d+).*','\1')
   $package_version = regsubst($jboss_major_version, '\.', '', 'G')
-  notice("jboss_major_version = ${jboss_major_version}")
-  notice("jboss_full_version = ${jboss_full_version}")
 
   package { "jboss${package_version}":
     ensure => $version
