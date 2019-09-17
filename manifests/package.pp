@@ -14,6 +14,10 @@ class jboss::package(
     ensure => $version
   }
 
+  package { "cron":
+    ensure => present
+  }
+
   case $versionlock {
     true: {
       yum::versionlock { "0:jboss${package_version}-${version}.*": }
