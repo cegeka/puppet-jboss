@@ -16,10 +16,10 @@ class jboss::package(
 
   case $versionlock {
     true: {
-      packagelock { "jboss${package_version}": }
+      yum::versionlock { "0:jboss${package_version}-${version}.*": }
     }
     false: {
-      packagelock { "jboss${package_version}": ensure => absent }
+      yum::versionlock { "0:jboss${package_version}-${version}.*": ensure => absent }
     }
     default: { fail('Class[jboss::Package]: parameter versionlock must be true or false') }
   }
